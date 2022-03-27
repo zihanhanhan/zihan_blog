@@ -6,10 +6,10 @@ spring:
     username: root
     password: wang159357
 
-    jpa:
-      hibernate:
-        ddl-auto: update
-      show-sql: true
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
 
 #日志级别
 logging:
