@@ -4,6 +4,9 @@ import com.zihan.blog.NotFoundException;
 import org.springframework.data.crossstore.ChangeSetPersister;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+
+import javax.swing.*;
 
 @Controller
 public class IndexController {
@@ -12,10 +15,16 @@ public class IndexController {
     public String index(){
 //        int i = 9/0;
 
-        String blog = null;
-        if(blog == null) {
-            throw new NotFoundException("博客不存在");
-        }
+//        String blog = null;
+//        if(blog == null) {
+//            throw new NotFoundException("博客不存在");
+//        }
+
         return "index";
+    }
+
+    @GetMapping("/blog")
+    public String blog(){
+        return "blog";
     }
 }
