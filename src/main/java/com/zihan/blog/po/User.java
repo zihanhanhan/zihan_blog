@@ -16,6 +16,7 @@ public class User {
     private String username;
     private String email;
     private String avatar;
+    private String password;
     private Integer type;//用户类型
 
     @Temporal(TemporalType.TIMESTAMP)
@@ -102,6 +103,14 @@ public class User {
         this.blogs = blogs;
     }
 
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
     @Override
     public String toString() {
         return "User{" +
@@ -110,9 +119,11 @@ public class User {
                 ", username='" + username + '\'' +
                 ", email='" + email + '\'' +
                 ", avatar='" + avatar + '\'' +
+                ", password='" + password + '\'' +
                 ", type=" + type +
                 ", createTime=" + createTime +
                 ", updateTime=" + updateTime +
+                ", blogs=" + blogs +
                 '}';
     }
 }
